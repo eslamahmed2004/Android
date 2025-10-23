@@ -153,3 +153,30 @@ git clone https://github.com/eslamahmed2004/Android.git
 
 # Open the project in Android Studio
 # Then click 'Run' ▶️ to launch the app on your device or emulator
+```
+# ⚠️ Gradle Local Installation Fix
+
+If you face issues with Gradle downloading every time, here’s a solution that worked for me:
+
+---
+
+## Steps to Fix
+
+1. Open Android Studio and go to:  
+   `File --> Settings --> Build, Execution, Deployment --> Build Tools --> Gradle`
+
+2. In the right panel, under **Gradle Projects**, change the **Gradle distribution** from **Wrapper** to **Local installation**.
+
+3. Enter the path where Gradle is installed:
+
+   - **Option 1:** If you manually installed Gradle, it’s probably in:  
+     `C:\Gradle\gradle-7.0.2` (or your version)
+
+   - **Option 2:** If Android Studio automatically downloaded Gradle, it will be in:  
+     `C:\Users\[your-username]\.gradle\wrapper\dists\gradle-7.0.2-bin\[folder-with-a-long-name]\gradle-7.0.2`
+
+---
+
+## ✅ Notes
+- This prevents Gradle from downloading every time you run the project.  
+- Make sure the path matches the actual Gradle version installed on your machine.
