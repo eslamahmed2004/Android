@@ -18,9 +18,9 @@ fun Task2(onBack: () -> Unit) {
     var currentIndex by remember { mutableStateOf(0) }
 
     val images = listOf(
-        R.drawable.image1,
-        R.drawable.image2,
-        R.drawable.image3
+        R.drawable.task2image1,
+        R.drawable.task2image2,
+        R.drawable.task2image3
     )
 
     val titles = listOf(

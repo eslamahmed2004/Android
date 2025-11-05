@@ -9,6 +9,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import com.example.android.Tasks.Task3
 import com.example.android.tasks.Task1
 import com.example.android.tasks.Task2
 import com.example.android.ui.theme.AndroidTheme
@@ -16,6 +20,12 @@ import com.example.android.ui.theme.AndroidTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).let { controller ->
+            controller.hide(WindowInsetsCompat.Type.statusBars())
+            controller.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
         setContent {
             AndroidTheme {
                 Surface(
@@ -37,6 +47,8 @@ fun MainScreen() {
     when (selectedTask) {
         "task1" -> Task1(onBack = { selectedTask = null })
         "task2" -> Task2(onBack = { selectedTask = null })
+        "task3" -> Task3(onBack = { selectedTask = null })
+
         else -> MainMenu(onSelectTask = { selectedTask = it })
     }
 }
@@ -58,6 +70,10 @@ fun MainMenu(onSelectTask: (String) -> Unit) {
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = { onSelectTask("task2") }) {
             Text(" Task 2")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { onSelectTask("task3") }) {
+            Text(" Task 3")
         }
     }
 }

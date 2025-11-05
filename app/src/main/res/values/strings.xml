@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Android</string>
+
+    <string name="affirmation1">You are awesome!</string>
+    <string name="affirmation2">Believe in yourself!</string>
+    <string name="affirmation3">Stay positive!</string>
+    <string name="affirmation4">Never give up!</string>
+    <string name="affirmation5">You can do it!</string>
+    <string name="affirmation6">Be kind to yourself!</string>
+    <string name="affirmation7">Dream big!</string>
+    <string name="affirmation8">Keep learning!</string>
+    <string name="affirmation9">Trust the process!</string>
+    <string name="affirmation10">Make it happen!</string>
+
+    <string name="about_1">This app is designed to help you stay productive and organized every day.</string>
+    <string name="about_2">Our mission is to make your daily tasks easier and more enjoyable.</string>
+    <string name="about_3">Developed with passion using modern Android technologies.</string>
+    <string name="about_4">We continuously update the app to bring you new features and improvements.</string>
+    <string name="about_5">Your feedback matters! Feel free to share your thoughts with us.</string>
+    <string name="about_6">Experience a clean and simple design built for smooth performance.</string>
+    <string name="about_7">This app was created to help you focus on what really matters.</string>
+    <string name="about_8">Built with Jetpack Compose for a modern and dynamic user interface.</string>
+    <string name="about_9">Thank you for supporting our journey toward better mobile experiences.</string>
+    <string name="about_10">Version 1.0 — crafted with love by the development team.</string>
 </resources>
+
+
+
